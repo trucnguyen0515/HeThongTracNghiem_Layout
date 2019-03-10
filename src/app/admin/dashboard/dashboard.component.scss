@@ -1,0 +1,98 @@
+.main {
+  margin-left: 211px;
+  margin-top: 100px;
+  margin-right: 15px;
+}
+@media(max-width: 700px) {
+  .main {
+    margin-left: 0;
+  }
+}
+
+.page-title{
+  font-size: 18px;
+  margin: 0;
+  line-height: 75px;
+  color: #323a46;
+}
+.widget-flat {
+  position: relative;
+  overflow: hidden;
+}
+.card .card-title {
+  color: #000000;
+  font-weight: normal;
+  margin-bottom: 1.25rem;
+  text-transform: capitalize;
+  font-size: 1.125rem;
+}
+.card .card-title>i {
+  font-size: 1rem;
+  margin-right: .5rem;
+}
+.card {
+  border: 2px solid #f7f7f7;
+  margin-bottom: 30px;
+
+  border-radius: 2px;
+  border-top: 4px solid #8cddcd;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, .05);
+  // border-left: none;
+  // border-right: none;
+  // border-bottom: none;
+}
+.card-success{
+  border-top-color: #2ecc71;
+}
+.card-info{
+  border-top-color: #17a2b8;
+}
+.card-warning{
+  border-top-color: #f1c40f;
+}
+
+.widget-flat i.widget-icon {
+  font-size: 30px;
+}
+.text-muted {
+  font-size: 1.1rem;
+  color: #98a6ad !important;
+}
+
+
+.p-3 {
+  padding: 1.5rem !important;
+}
+
+.mt-2 {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+.text-primary {
+  color: #00acc1 !important;
+}
+.text-danger {
+  color: #f1556c !important;
+}
+
+#bar{
+  display: block;
+  width: 997px;
+  height: 350px;
+}
+#doughnut{
+  display: block;
+  width: 458px;
+  height: 350px;
+}
+
+
+.table-centered td {
+  vertical-align: middle !important;
+}
+
+#chartdiv, #calendar {
+  width: 100%;
+  height: 800px;
+}
+

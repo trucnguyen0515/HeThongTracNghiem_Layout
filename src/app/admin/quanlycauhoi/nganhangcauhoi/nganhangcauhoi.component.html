@@ -1,0 +1,46 @@
+<div class="container-fluid">
+  <table id="table_cauhoi" class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <td>Id</td>
+        <td>Tiêu đề</td>
+        <td>Chủ đề</td>
+        <td>Ghi chú</td>
+        <td>Thời gian</td>
+        <td>Điểm</td>
+        <td>Người tạo</td>
+        <td>Ngày tạo</td>
+        <td>Ngôn ngữ</td>
+        <td>Lĩnh vực</td>
+        <td>Loại câu hỏi</td>
+        <td>Chỉnh sửa</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cauhoi of quests | async">
+        <ng-container *ngIf="!cauhoi.daXoa" class="card-header">
+          <td>{{cauhoi.id}}</td>
+          <td>{{cauhoi.tieuDe}}</td>
+          <td>{{cauhoi.chuDe}}</td>
+          <td>{{cauhoi.ghiChu}}</td>
+          <td>{{cauhoi.thoiGian}}</td>
+          <td>{{cauhoi.diem}}</td>
+          <td>{{cauhoi.nguoiTao}}</td>
+          <td>{{cauhoi.ngayTao}}</td>
+          <td>{{cauhoi.ngonNgu}}</td>
+          <td>{{cauhoi.linhVuc}}</td>
+          <td>{{cauhoi.loaiCauHoi}}</td>
+          <td class="btn-group">
+            <button class="btn btn-outline-primary" type="button" (click)="SuaCauHoi(cauhoi.key)" data-target="#chinh-sua-cau-hoi">
+               <i class="fas fa-edit"></i>
+            </button>
+            <button class="btn btn-outline-danger" (click)="XoaCauHoi(cauhoi.key)">
+              <i class="far fa-trash-alt"></i>
+            </button>
+          </td>
+        </ng-container>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

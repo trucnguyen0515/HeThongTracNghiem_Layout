@@ -1,0 +1,23 @@
+
+@import '../../../../assets/Home/Scss/helpers/variables';
+
+#danhsach_danhmuc, #camnhan_nguoidung, #Dowload_Mobile{
+    padding: $padding_section;
+}
+
+#Dowload_Mobile{
+    background:$mau_Phu_2;
+    color:white;
+}
+
+#Update_Account{
+    background: $mau_Phu_1;
+    padding: 40px 0;
+}
+
+.title_Section{
+    text-align: center;
+    .title1{
+        font-weight: 200 !important;
+    }
+}

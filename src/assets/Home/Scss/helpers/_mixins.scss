@@ -1,0 +1,10 @@
+
+@mixin my_Button($border-radius,$background,$fontcolor,$mau_border) {
+    background: $background;
+    border-radius: $border-radius;
+    color: $fontcolor;
+    padding: 10px 25px;
+    border: 2px solid $mau_border;
+    cursor: pointer;
+}
+

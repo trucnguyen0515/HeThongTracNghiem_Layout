@@ -1,0 +1,26 @@
+[
+    { 
+      "id":"cate1",
+      "TenDanhMuc":"Tiếng Anh Chuyên Ngành IT",
+      "IconDanhMuc":"fas fa-globe-americas",
+      "NoiDungLinhVuc":"TLorem ipsum dolor sit amet consectetur adipisicing elit. Minima voluptatum dolorum officiis quo praesentium impedit animi maxime."
+    },
+    { 
+      "id":"cate2",
+      "TenDanhMuc":"Lập Trình Web", 
+      "IconDanhMuc":"fas fa-code",
+      "NoiDungLinhVuc":"TLorem ipsum dolor sit amet consectetur adipisicing elit. Minima voluptatum dolorum officiis quo praesentium impedit animi maxime."
+    },
+    { 
+      "id":"cate3",
+      "TenDanhMuc":"Lập Trình Web Cơ Bản", 
+      "IconDanhMuc":"fas fa-laptop-code",
+      "NoiDungLinhVuc":"TLorem ipsum dolor sit amet consectetur adipisicing elit. Minima voluptatum dolorum officiis quo praesentium impedit animi maxime."
+    },
+    { 
+      "id":"cate4",
+      "TenDanhMuc":"Từ Điển Chuyên Ngành IT", 
+      "IconDanhMuc":"fas fa-language",
+      "NoiDungLinhVuc":"TLorem ipsum dolor sit amet consectetur adipisicing elit. Minima voluptatum dolorum officiis quo praesentium impedit animi maxime."
+    }
+  ]

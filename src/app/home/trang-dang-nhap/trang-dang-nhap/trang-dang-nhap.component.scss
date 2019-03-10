@@ -1,0 +1,50 @@
+@import '../../../../assets/Home/Scss/helpers/variables';
+@import '../../../../assets/Home/Scss/helpers/extends';
+@import '../../../../assets/Home/Scss/helpers/mixins';
+
+// a{
+//     color:#007bff !important;
+//     text-decoration: underline !important;
+// }
+
+// #DangNhap{
+//     padding: $padding_section;
+// }
+
+// .form_login{
+//     max-width: 400px;
+//     margin: 0 auto;
+// }
+
+// form{
+//     @extend .LineHover;
+//     margin-top:50px;
+//     margin-bottom: 35px;
+//     .group:nth-of-type(2){
+//         margin-bottom: 30px;
+//     }
+// }
+// input{
+//     @extend .my_Input;
+// }
+
+
+// .btn_Login{
+//     @include my_Button(0,$mau_Chinh,white,$mau_Chinh);
+//     width: 100%;
+//     margin-top:20px;
+// }
+
+.btn_Login_fb{
+    @include my_Button(30px,#4167b2,white,#4167b2);
+    padding: 15px 20px;
+    margin-top:20px;
+    width: 300px;
+    margin: 100px 0;
+}
+
+.fa-facebook-square{
+    font-size:24px;
+}
+
+

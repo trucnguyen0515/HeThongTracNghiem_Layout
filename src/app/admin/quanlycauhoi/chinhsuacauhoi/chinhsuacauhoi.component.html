@@ -1,0 +1,221 @@
+<div class="container">
+  <form [formGroup]="cauHoi" (ngSubmit)="TaoCauHoi(cauHoi.value)">
+    <div class="row">
+      <!-- Tiêu Đề -->
+      <div class="form-group col-sm-6">
+        <label for="tieuDe">Tiêu Đề</label>
+        <input type="text" class="form-control" name="tieuDe" placeholder="Tiêu Đề" formControlName="tieuDe">
+        <!-- Validation -->
+        <div class="validate">
+          <div class="invalid-tooltip" *ngIf="cauHoi.get('tieuDe').invalid && cauHoi.get('tieuDe').touched">
+            Vui lòng điền tiêu đề!
+          </div>
+        </div>
+      </div>
+      <!-- Ghi Chú -->
+      <div class="form-group col-sm-6">
+        <label for="ghiChu">Ghi Chú</label>
+        <input type="text" class="form-control" name="ghiChu" placeholder="Ghi Chú" formControlName="ghiChu">
+        <!-- Validation -->
+        <div class="validate">
+          <div class="invalid-tooltip" *ngIf="cauHoi.get('ghiChu').invalid && cauHoi.get('ghiChu').touched">
+            Vui lòng điền nội dung ghi chú!
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Thời Gian-->
+      <div class="form-group col-sm-3">
+        <label for="thoiGian">Thời Gian</label>
+        <input type="text" class="form-control" name="thoiGian" placeholder="Thời Gian" formControlName="thoiGian">
+        <!-- Validation -->
+        <div class="validate">
+          <div class="invalid-tooltip" *ngIf="cauHoi.get('thoiGian').invalid && cauHoi.get('thoiGian').touched">
+            Vui lòng điền thời gian của câu hỏi!
+          </div>
+        </div>
+      </div>
+      <!-- Điểm -->
+      <div class="form-group col-sm-3">
+        <label for="diem">Điểm</label>
+        <input type="number" class="form-control" name="diem" placeholder="Điểm" formControlName="diem">
+        <!-- Validation -->
+        <div class="validate">
+          <div class="invalid-tooltip" *ngIf="cauHoi.get('diem').invalid && cauHoi.get('diem').touched">
+            Vui lòng điền điểm câu hỏi!
+          </div>
+        </div>
+      </div>
+      <!-- Ngày tạo -->
+      <div class="form-group col-sm-3">
+        <label for="ngayTao">Ngày tạo</label>
+        <input type="text" class="form-control" name="ngayTao" placeholder="Ngày tạo" formControlName="ngayTao"
+          disabled>
+      </div>
+      <!-- Người tạo -->
+      <div class="form-group col-sm-3">
+        <label for="nguoiTao">Người tạo</label>
+        <input type="number" class="form-control" name="nguoiTao" placeholder="Người tạo" formControlName="nguoiTao">
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Mã Chủ Đề -->
+      <div class="form-group col-sm-4">
+        <label for="chuDe">Mã chủ đề: </label>
+        <select class="custom-select" name="chuDe" formControlName="chuDe">
+          <option value="1">Mã chủ đề 1</option>
+          <option value="2">Mã chủ đề 2</option>
+          <option value="3">Mã chủ đề 3</option>
+        </select>
+        <!-- Validation -->
+        <div class="validate">
+          <div class="invalid-tooltip" *ngIf="cauHoi.get('chuDe').invalid && cauHoi.get('chuDe').touched">
+            Vui lòng chọn chủ đề câu hỏi
+          </div>
+        </div>
+      </div>
+      <!-- Lĩnh Vực Câu Hỏi-->
+      <div class="form-group col-sm-4">
+        <label for="linhVuc">Lĩnh vực: </label>
+        <select class="custom-select" name="linhVuc" formControlName="linhVuc">
+          <option *ngFor="let linhvuc of listLinhVuc" value="{{linhvuc}}">{{linhvuc}}</option>
+        </select>
+        <!-- Validation -->
+        <div class="validate">
+          <div class="invalid-tooltip" *ngIf="cauHoi.get('linhVuc').invalid && cauHoi.get('linhVuc').touched">
+            Vui lòng điền lĩnh vực câu hỏi
+          </div>
+        </div>
+      </div>
+      <!-- Ngôn Ngữ -->
+      <div class="form-group col-sm-4">
+        <label for="ngonNgu">Ngôn Ngữ: </label>
+        <select class="custom-select" name="ngonNgu" formControlName="ngonNgu">
+          <option *ngFor="let ngonngu of listNgonNgu" value="{{ngonngu}}">{{ngonngu}}</option>
+        </select>
+        <!-- Validation -->
+        <div class="validate">
+          <div class="invalid-tooltip" *ngIf="cauHoi.get('ngonNgu').invalid && cauHoi.get('ngonNgu').touched">
+            Vui lòng điền ngôn ngữ câu hỏi
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Nội Dung Câu Hỏi -->
+      <div class="form-group col-sm-12">
+        <label for="noiDung">Nội Dung</label>
+        <div id="toolbar-noidung"></div>
+        <div id="noiDung" class="noiDung" name="noiDung" (keyup)="setNoiDung(cauHoi)"></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="row">
+          <!-- Loại câu hỏi -->
+          <div class="form-group col-sm-6">
+            <label for="loaiCauhoi">Loại Câu Hỏi: </label>
+            <select class="custom-select" name="loaiCauHoi" formControlName="loaiCauHoi">
+              <option value="1">Điền Vào Ô Trống</option>
+              <option value="2">Sắp Xếp</option>
+              <option value="3">Chọn 1 Đáp Án Đúng</option>
+              <option value="4">Chọn Nhiều Đáp Án Đúng</option>
+            </select>
+            <!-- Validation -->
+            <div class="validate">
+              <div class="invalid-tooltip" *ngIf="cauHoi.get('loaiCauHoi').invalid && cauHoi.get('loaiCauHoi').touched">
+                Vui lòng điền loại câu hỏi
+              </div>
+            </div>
+          </div>
+          <!-- Cấp độ câu hỏi -->
+          <div class="form-group col-sm-6">
+            <label for="capDo">Cấp độ câu hỏi: </label>
+            <select class="custom-select" name="capDo" formControlName="capDo">
+              <option value="1">Cấp độ 1</option>
+              <option value="2">Cấp độ 2</option>
+              <option value="3">Cấp độ 3</option>
+            </select>
+            <!-- Validation -->
+            <div class="validate">
+              <div class="invalid-tooltip" *ngIf="cauHoi.get('capDo').invalid && cauHoi.get('capDo').touched">
+                Vui lòng điền cấp độ câu hỏi
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <!-- Đáp Án -->
+          <div class="form-group col-sm-12">
+            <!-- Sắp xếp đáp án -->
+            <div *ngIf="cauHoi.get('loaiCauHoi').value == 2">
+              <select class="custom-select" name="dapAn">
+                <option value="0" selected disabled>Chọn số lượng đáp án</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+              </select>
+              <textarea class="form-control" placeholder="Thứ tự các đáp án" rows=5 style="margin-top: 10px"></textarea>
+            </div>
+            <!-- Câu hỏi có nhiều đáp án đúng -->
+            <div *ngIf="cauHoi.get('loaiCauHoi').value == 4">
+              <select class="custom-select" name="dapAn">
+                <option value="0" selected disabled>Chọn số lượng đáp án đúng</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+              </select>
+              <textarea class="form-control" placeholder="Các đáp án đúng" rows=5 style="margin-top: 10px"></textarea>
+            </div>
+            <!-- Câu hỏi có 1 đáp án -->
+            <div *ngIf="cauHoi.get('loaiCauHoi').value == 3">
+              <label for="">Một đáp án đúng</label>
+              <textarea class="form-control" placeholder="Một đáp án đúng" rows=7></textarea>
+            </div>
+            <!-- Điền vào ô trống -->
+            <div *ngIf="cauHoi.get('loaiCauHoi').value == 1">
+              <label for="">Điền vào ô trống</label>
+              <textarea class="form-control" placeholder="Điền vào ô trống" rows=7></textarea>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="col-sm-6">
+        <!-- Gợi Ý -->
+        <div class="form-group col-sm-12">
+          <label for="goiY">Gợi Ý</label>
+          <input type="number" class="form-control" name="goiY" placeholder="Số lượng gợi ý" formControlName="goiY"
+            (change)="TaoForm((cauHoi.get('goiY')).value)">
+          <div id="goiy"></div>
+          <!-- Validation -->
+          <div class="validate">
+            <div class="invalid-tooltip" *ngIf="cauHoi.get('goiY').invalid && cauHoi.get('goiY').touched">
+              Vui lòng điền gợi ý câu hỏi
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-outline-success" [disabled]="!cauHoi.valid">Hoàn tất</button>
+    <button type="reset" class="btn btn-outline-danger" [disabled]="!cauHoi.valid && (!cauHoi.touched || !cauHoi.dirty)">Hủy</button>
+  </form>
+
+  <br>
+  <div class="alert alert-success" style="display: none">
+    <strong>Thành Công!</strong> Đã thêm câu hỏi.
+  </div>
+</div>

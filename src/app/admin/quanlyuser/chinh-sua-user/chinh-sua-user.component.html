@@ -1,0 +1,62 @@
+<div class="container">
+  <form [formGroup]="user" (ngSubmit)="ChinhSuaUser(user.value)">
+    <div class="row">
+      <div class="form-group col-sm-12">
+        <label for="taiKhoan">Tài khoản</label>
+        <input type="text" class="form-control" name="taiKhoan" placeholder="Nhập tên người dùng" formControlName="taiKhoan">
+        <!-- Validation -->
+        <div class="validate">
+          <div class="invalid-tooltip" *ngIf="user.get('taiKhoan').invalid && (user.get('taiKhoan').touched || user.get('taiKhoan').dirty)">
+            Vui lòng điền tài khoản!
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group col-sm-12">
+        <label for="matKhau">Mật khẩu</label>
+        <input type="text" class="form-control" name="matKhau" placeholder="Nhập mật khẩu" formControlName="matKhau">
+        <!-- Validation -->
+        <div class="validate">
+          <div class="invalid-tooltip" *ngIf="user.get('matKhau').invalid && (user.get('matKhau').touched || user.get('matKhau').dirty)">
+            Vui lòng điền mật khẩu!
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group col-sm-12">
+        <label for="capDo">Cấp độ</label>
+        <input type="number" class="form-control" name="capDo" placeholder="Nhập cấp độ" formControlName="capDo">
+        <!-- Validation -->
+        <div class="validate">
+          <div class="invalid-tooltip" *ngIf="user.get('capDo').invalid && (user.get('capDo').touched || user.get('capDo').dirty)">
+            Vui lòng điền cấp độ!
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group col-sm-12">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" name="email" placeholder="Nhập email" formControlName="email">
+        <!-- Validation -->
+        <div class="validate">
+          <div class="invalid-tooltip" *ngIf="user.get('email').invalid && (user.get('email').touched || user.get('email').dirty)">
+            Vui lòng điền email!
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="!user.valid" class="btn btn-outline-success">Hoàn tất</button>
+    <button type="reset" [disabled]="!user.valid && (!user.touched || !user.dirty)" class="btn btn-outline-danger">Hủy</button>
+  </form>
+  <br>
+  <div class="alert alert-success" style="display: none">
+    <strong>Hoàn thành!</strong> Chỉnh sửa thành công.
+  </div>
+</div>

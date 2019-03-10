@@ -1,0 +1,72 @@
+<div id="DangNhap" #nameInput class="clearfix">
+  <!-- Div Left -->
+  <div class="divLeft_Register d-flex justify-content-center align-items-center">
+    <div class="container div_register">
+      <div class="TieuDe mt-3">
+        <h1>
+          <span class="text2">Login</span>
+          <span class="text1"> to Have</span>
+          <br>
+          <span class="text1">the</span>
+          <span class="text2"> Access</span>
+        </h1>
+      </div>
+      <p class="mt-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+      </p>
+      <button class="btn_DangKy" (click)="TaoTaiKhoan()">Bạn chưa có Tài Khoản?</button>
+    </div>
+  </div>
+
+  <!-- Div Right -->
+  <div class="divRight_Login">
+    <div class="content_Login">
+      <div class="content container">
+        <div class="myLogo d-flex justify-content-center">
+          <img class="logo" src="../../../assets/Home/image_Home/myLogo.png" alt="logo">
+          <h1>Cyber Course</h1>
+        </div>
+
+        <!-- Form Login -->
+        <form class="mt-5">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="group">
+                <input type="text" style="width: 100%" required>
+                <label class="label">Tài Khoản</label>
+                <div class="bar"></div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="group">
+                <input type="text" style="width: 100%" required>
+                <label class="label">Mật Khẩu</label>
+                <div class="bar"></div>
+              </div>
+            </div>
+          </div>
+          <button class="btn_Login">Đăng Nhập</button>
+        </form>
+
+        <div class="d-flex justify-content-between">
+          <div class="div_dangky text-center">
+            <span (click)="TaoTaiKhoan()">Tạo tài khoản</span>
+          </div>
+          <div class="quenmatkhau text-center">
+            <span>Quên mật khẩu?</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="Footer_Login d-block w-100 text-center pb-3">
+      <small>@2018 - www.cybercourse.vn - All rights reserved</small>
+      <br>
+      <small>
+        <span>Giấy phép</span> |
+        <span>Chính sách</span> |
+        <span>Điều khoản</span>
+      </small>
+    </div>
+  </div>
+</div>

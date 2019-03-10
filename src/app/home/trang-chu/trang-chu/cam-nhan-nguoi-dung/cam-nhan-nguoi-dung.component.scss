@@ -1,0 +1,65 @@
+@import '../../../../../assets/Home/Scss/helpers/variables';
+
+$color_border_review:#e2e2e2;
+
+
+#CamNhan_NguoiDung{
+    padding: $padding_section;
+}
+
+.title_Section{
+    text-align: center;
+    .title1{
+        font-weight: 200 !important;
+    }
+}
+
+.review_content{
+    padding:25px;
+    border:2px solid $color_border_review;
+    position:relative;
+    min-height: 270px;
+
+    &:hover{
+        border-color: $mau_Chinh;
+        cursor: pointer;
+
+        &:before{
+            border-top-color: $mau_Chinh;
+        }
+    }
+}
+.review_content::after, .review_content::before{
+    top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: "";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+.review_content:after{
+    border-color: rgba(255, 255, 255, 0);
+	border-top-color: #fff;
+	border-width: 20px;
+	margin-left: -20px;
+}
+.review_content::before{
+    border-color: rgba(226, 226, 226, 0);
+	border-top-color: $color_border_review;
+	border-width: 23px;
+	margin-left: -23px;
+}
+
+
+
+.userimg{
+    border-radius: 25px;
+    overflow: hidden;
+    width: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top:35px;
+}

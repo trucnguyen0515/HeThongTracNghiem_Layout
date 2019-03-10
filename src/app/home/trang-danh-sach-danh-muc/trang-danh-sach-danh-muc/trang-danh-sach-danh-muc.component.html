@@ -1,0 +1,13 @@
+<app-my-breadcrumb [tenTrang]="tenTrang" *ngIf="flag"></app-my-breadcrumb>
+<div id="DanhSach_DanhMuc">
+  <div class="container">
+    <div class="DanhMuc">
+      <div class="row">
+        <div class="col-md-4 col-lg-3 col-sm-6" *ngFor="let danhmuc of DanhSachDanhMuc">
+          <app-danh-muc [DanhSachDanhMuc]="danhmuc">
+          </app-danh-muc>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

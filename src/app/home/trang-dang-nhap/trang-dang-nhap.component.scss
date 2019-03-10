@@ -1,0 +1,120 @@
+@import '../../../assets/Home/css_Home/main.scss';
+#DangNhap,{
+    height: 100vh;
+    width:100%;
+}
+
+
+// Div left
+.divLeft_Register{
+    float: left;
+    width: 60%;
+    height: 100%;
+    background: url('../../../assets/Home/image_Home/bgLogin.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.div_register{
+    max-width:700px;
+}
+
+.TieuDe{
+    color: white;
+    @include LineTieuDe;
+}
+p{
+    color:white;
+}
+.text2{
+    font-weight: 700;
+}
+.btn_DangKy{
+    @include myButton;
+    border-radius: 35px;
+    margin-top: 20px;
+}
+
+
+// Div right
+.divRight_Login{
+    float: left;
+    width: 40%;
+    height: 100%;
+    background: $ColorBackground2;
+    position: relative;
+    display: table;
+}
+.content_Login{
+    display: table-cell;
+    vertical-align: middle;
+}
+.content{
+    max-width:450px;
+    margin:0 auto;
+}
+
+@include LineHover();
+form{
+    margin-top:50px;
+    margin-bottom: 35px;
+    .group:nth-of-type(2){
+        margin-bottom: 30px;
+    }
+}
+input{
+    @include MyInput(#8e85852e);
+}
+.label{
+    color: $ColorTitle;
+}
+input:focus ~ .label, input:valid ~ .label{
+    color: $ColorFont;
+}
+
+
+
+.logo{
+    width: 50px;
+    height: 50px;
+}
+.myLogo h1{
+    margin: 0;
+    margin-left: 14px;
+    margin-top: 5px;
+    font-size: 27px;
+    color: $ColorMain1;
+}
+.btn_Login{
+    @include myButton;
+    border-radius: 35px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+
+
+.div_dangky,.quenmatkhau{
+    span{
+        color:$ColorMain1;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+
+small{
+    span{
+        color:$ColorMain1;
+    }
+}
+
+
+
+.Footer_Login{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+
+

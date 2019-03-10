@@ -1,0 +1,352 @@
+<div class="main">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12">
+        <h4 class="page-title">Dashboard</h4>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Column -->
+      <div class="col-xl-3 col-lg-6">
+        <div class="card widget-flat card-success">
+          <div class="card-body p-0">
+            <div class="p-3 pb-0">
+              <div class="float-right">
+                <i class="fa fa-shopping-cart text-success widget-icon mt-5"></i>
+              </div>
+              <h4 class="text-muted font-weight-normal mt-0">Total Sales</h4>
+              <h3 class="mt-4 text-success">3,543</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Column-->
+
+      <!-- Column -->
+      <div class="col-xl-3 col-lg-6">
+        <div class="card widget-flat card-info">
+          <div class="card-body p-0">
+            <div class="p-3 pb-0">
+              <div class="float-right">
+                <i class="fa fa-file-alt text-info widget-icon mt-5"></i>
+              </div>
+              <h4 class="text-muted font-weight-normal mt-0">Tổng Đề thi</h4>
+              <h3 class="mt-4 text-info">3,543</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Column-->
+
+      <!-- Column -->
+      <div class="col-xl-3 col-lg-6">
+        <div class="card widget-flat card-warning">
+          <div class="card-body p-0">
+            <div class="p-3 pb-0">
+              <div class="float-right">
+                <i class="fa fa-users text-warning widget-icon mt-5"></i>
+              </div>
+              <h4 class="text-muted font-weight-normal mt-0">Tổng Người dùng</h4>
+              <h3 class="mt-4 text-warning">3,543</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Column-->
+
+      <!-- Column -->
+      <div class="col-xl-3 col-lg-6">
+        <div class="card widget-flat ">
+          <div class="card-body p-0">
+            <div class="p-3 pb-0">
+              <div class="float-right">
+                <i class="fa fa-eye text-primary widget-icon mt-5"></i>
+              </div>
+              <h4 class="text-muted font-weight-normal mt-0">Tổng Lượt ghé thăm</h4>
+              <h3 class="mt-4 text-primary">3,543</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Column-->
+
+    </div>
+
+    <div class="row">
+      <div class="col-xl-8">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">
+              <i class="fas fa-chart-line"></i>
+              Sale Analytics
+            </h4>
+            <canvas id="bar" height="350" class="mt-4"></canvas>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-4">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">
+              <i class="fas fa-chart-pie"></i>
+              Top Marketplaces
+            </h4>
+            <canvas id="doughnut" height="350" class="mt-4"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xl-12">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">
+              <i class="fas fa-table"></i>
+              Users
+            </h4>
+            <div class="table-responsive mt-3">
+              <table id="table-user" class="table table-hover table-centered mb-0">
+                <thead>
+                  <tr>
+                    <th>User ID</th>
+                    <th>Basic Info</th>
+                    <th>Phone</th>
+                    <th>Location</th>
+                    <th>Created Date</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <!-- User Row -->
+                  <tr>
+                    <td>
+                      <b>#0121</b>
+                    </td>
+                    <td>
+                      <img src="assets/Admin/users/avatar-1.jpg" alt="contact-img" width="36" height="36" title="contact-img" class="rounded-circle float-left mr-2">
+                      <p class="mb-0 font-weight-bold">
+                        <a >George Lanes</a>
+                      </p>
+                      <span class="font-13">george@examples.com</span>
+                    </td>
+                    <td>
+                      606-467-7601
+                    </td>
+                    <td>
+                      New York
+                    </td>
+                    <td>
+                      2018/04/28
+                    </td>
+                    <td>
+                      <div class="btn-group dropdown">
+                        <a  class="dropdown-toggle arrow-none btn btn-light btn-sm" data-toggle="dropdown" aria-expanded="false">
+                          <i class="mdi mdi-dots-horizontal"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <a class="dropdown-item" href="#">
+                            <i class="mdi mdi-pencil mr-1 text-muted"></i>Edit Contact</a>
+                          <a class="dropdown-item" href="#">
+                            <i class="mdi mdi-delete mr-1 text-muted"></i>Remove</a>
+                          <a class="dropdown-item" href="#">
+                            <i class="mdi mdi-email mr-1 text-muted"></i>Send Email</a>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <!--End User Row-->
+
+                  <!-- User Row -->
+                  <tr>
+                    <td>
+                      <b>#0120</b>
+                    </td>
+                    <td>
+                      <img src="assets/Admin/users/avatar-1.jpg" alt="contact-img" width="36" height="36" title="contact-img" class="rounded-circle float-left mr-2">
+                      <p class="mb-0 font-weight-bold">
+                        <a >Morgan Fuller</a>
+                      </p>
+                      <span class="font-13">morgan@examples.com</span>
+                    </td>
+                    <td>
+                      407-748-6878
+                    </td>
+                    <td>
+                      England
+                    </td>
+                    <td>
+                      2018/04/27
+                    </td>
+                    <td>
+                      <div class="btn-group dropdown">
+                        <a  class="dropdown-toggle arrow-none btn btn-light btn-sm" data-toggle="dropdown" aria-expanded="false">
+                          <i class="mdi mdi-dots-horizontal"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <a class="dropdown-item" href="#">
+                            <i class="mdi mdi-pencil mr-1 text-muted"></i>Edit Contact</a>
+                          <a class="dropdown-item" href="#">
+                            <i class="mdi mdi-delete mr-1 text-muted"></i>Remove</a>
+                          <a class="dropdown-item" href="#">
+                            <i class="mdi mdi-email mr-1 text-muted"></i>Send Email</a>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <!--End User Row-->
+
+                  <!-- User Row -->
+                  <tr>
+                    <td>
+                      <b>#0119</b>
+                    </td>
+                    <td>
+                      <img src="assets/Admin/users/avatar-1.jpg" alt="contact-img" width="36" height="36" title="contact-img" class="rounded-circle float-left mr-2">
+                      <p class="mb-0 font-weight-bold">
+                        <a >Charlie Daly</a>
+                      </p>
+                      <span class="font-13">charlie@examples.com</span>
+                    </td>
+                    <td>
+                      918-766-5946
+                    </td>
+                    <td>
+                      Canada
+                    </td>
+                    <td>
+                      2018/04/27
+                    </td>
+                    <td>
+                      <div class="btn-group dropdown">
+                        <a  class="dropdown-toggle arrow-none btn btn-light btn-sm" data-toggle="dropdown" aria-expanded="false">
+                          <i class="mdi mdi-dots-horizontal"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <a class="dropdown-item" href="#">
+                            <i class="mdi mdi-pencil mr-1 text-muted"></i>Edit Contact</a>
+                          <a class="dropdown-item" href="#">
+                            <i class="mdi mdi-delete mr-1 text-muted"></i>Remove</a>
+                          <a class="dropdown-item" href="#">
+                            <i class="mdi mdi-email mr-1 text-muted"></i>Send Email</a>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <!--End User Row-->
+
+                  <!-- User Row -->
+                  <tr>
+                    <td>
+                      <b>#0118</b>
+                    </td>
+                    <td>
+                      <img src="assets/Admin/users/avatar-1.jpg" alt="contact-img" width="36" height="36" title="contact-img" class="rounded-circle float-left mr-2">
+                      <p class="mb-0 font-weight-bold">
+                        <a >Skye Saunders</a>
+                      </p>
+                      <span class="font-13">skye@examples.com</span>
+                    </td>
+                    <td>
+                      302-232-1376
+                    </td>
+                    <td>
+                      France
+                    </td>
+                    <td>
+                      2018/04/26
+                    </td>
+                    <td>
+                      <div class="btn-group dropdown">
+                        <a  class="dropdown-toggle arrow-none btn btn-light btn-sm" data-toggle="dropdown" aria-expanded="false">
+                          <i class="mdi mdi-dots-horizontal"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <a class="dropdown-item" href="#">
+                            <i class="mdi mdi-pencil mr-1 text-muted"></i>Edit Contact</a>
+                          <a class="dropdown-item" href="#">
+                            <i class="mdi mdi-delete mr-1 text-muted"></i>Remove</a>
+                          <a class="dropdown-item" href="#">
+                            <i class="mdi mdi-email mr-1 text-muted"></i>Send Email</a>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <!--End User Row-->
+
+                  <!-- User Row -->
+                  <tr>
+                    <td>
+                      <b>#0117</b>
+                    </td>
+                    <td>
+                      <img src="assets/Admin/users/avatar-1.jpg" alt="contact-img" width="36" height="36" title="contact-img" class="rounded-circle float-left mr-2">
+                      <p class="mb-0 font-weight-bold">
+                        <a >Jodie Townsend</a>
+                      </p>
+                      <span class="font-13">jodie@examples.com</span>
+                    </td>
+                    <td>
+                      251-661-5962
+                    </td>
+                    <td>
+                      Tokyo
+                    </td>
+                    <td>
+                      2017/11/28
+                    </td>
+                    <td>
+                      <div class="btn-group dropdown">
+                        <a  class="dropdown-toggle arrow-none btn btn-light btn-sm" data-toggle="dropdown" aria-expanded="false">
+                          <i class="mdi mdi-dots-horizontal"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                          <a class="dropdown-item" href="#">
+                            <i class="mdi mdi-pencil mr-1 text-muted"></i>Edit Contact</a>
+                          <a class="dropdown-item" href="#">
+                            <i class="mdi mdi-delete mr-1 text-muted"></i>Remove</a>
+                          <a class="dropdown-item" href="#">
+                            <i class="mdi mdi-email mr-1 text-muted"></i>Send Email</a>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <!--End User Row-->
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xl-6">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="mb-2 card-title">
+              <i class="fas fa-globe-asia"></i>
+              World Map
+            </h4>
+            <div id="chartdiv"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-6">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="mb-2 card-title">
+              <i class="fas fa-calendar-alt"></i>
+              Calendar
+            </h4>
+            <div id="calendar"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+

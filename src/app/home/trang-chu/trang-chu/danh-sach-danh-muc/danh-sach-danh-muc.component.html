@@ -1,0 +1,19 @@
+<section id="DanhSachDanhMuc">
+    <div class="container">
+        <h2 class="title_Section"> 
+            <span class="title1">Danh Sách </span> 
+            <span class="title2">Danh Mục</span>
+        </h2>
+
+        <div class="DanhMuc">
+          <div class="row">
+            <div class="col-md-4 col-lg-3 col-sm-6" *ngFor="let danhmuc of DanhSach_DanhMuc">
+                <app-danh-muc 
+                    [DanhSachDanhMuc]="danhmuc"
+                    >
+                </app-danh-muc>
+            </div>
+          </div>
+        </div>
+    </div>
+</section>

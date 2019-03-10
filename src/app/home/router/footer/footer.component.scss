@@ -1,0 +1,66 @@
+@import '../../../../assets/Home/Scss/helpers/variables';
+
+a{
+    color: $mau_Font_Phu;
+}
+a:hover{
+    color:$mau_Chinh;
+}
+#Footer{
+    background:$mau_Phu_2;
+    color:$mau_Font_Phu;
+}
+.myFooter{
+    padding: $padding_section;
+}
+
+.title_menu{
+    color:white;
+    position: relative
+}
+.title_menu::before{
+    content: '';
+    position: absolute;
+    background: $mau_Chinh;
+    width: 30px;
+    height: 2px;
+    background: $mau_Chinh;
+    bottom:-10px;
+}
+
+// Logo
+.logo{
+    max-height: 65px;
+}
+i{
+    color:$mau_Chinh;
+    padding-right: 10px;
+}
+
+
+.footer_content{
+    padding: 25px 60px 0 0;
+}
+li{
+    padding:3px 0;
+}
+.list_link{
+    margin-top: 33px;
+
+}
+
+
+//  Bottom Footer
+.footer_bottom{
+    background:$mau_Phu_1;
+    text-align: center;
+    padding:12px 0;
+}
+.content_bottom{
+    margin:0;
+    padding: 15px 0;
+    
+}
+.color{
+    color:$mau_Chinh;
+}

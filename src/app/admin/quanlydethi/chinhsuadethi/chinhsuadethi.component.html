@@ -1,0 +1,144 @@
+<div class="container">
+  <form [formGroup]="dethi">
+    <div class="row">
+      <!-- Tiêu Đề -->
+      <div class="form-group col-sm-6">
+        <label for="tieude">Tiêu Đề</label>
+        <input type="text" class="form-control" name="tieude" id="tieude" placeholder="Tiêu Đề" formControlName="tieuDe">
+        <!-- Validation -->
+        <div class="validate">
+          <div class="invalid-tooltip" *ngIf="dethi.get('tieuDe').invalid && dethi.get('tieuDe').touched">
+            Vui lòng điền tiêu đề!
+          </div>
+        </div>
+      </div>
+      <!-- Ghi Chú -->
+      <div class="form-group col-sm-6">
+        <label for="ghichu">Ghi Chú</label>
+        <input type="text" class="form-control" name="ghichu" id="ghichu" placeholder="Ghi Chú" formControlName="ghiChu">
+        <!-- Validation -->
+        <div class="validate">
+          <div class="invalid-tooltip" *ngIf="dethi.get('ghiChu').invalid && dethi.get('ghiChu').touched">
+            Vui lòng điền ghi chú đề thi!
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-sm-6">
+        <label for="noidung">Nội Dung</label>
+        <input type="text" class="form-control" name="noidung" id="noidung" placeholder="Nội Dung" formControlName="noiDung">
+        <!-- Validation -->
+        <div class="validate">
+          <div class="invalid-tooltip" *ngIf="dethi.get('noiDung').invalid && dethi.get('noiDung').touched">
+            Vui lòng điền nội dung!
+          </div>
+        </div>
+      </div>
+      <!--<div class="form-group col-sm-6">
+        <label for="ngaytao">Ngày Tạo</label>
+        <input type="date" class="form-control" name="ngaytao" id="ngaytao" placeholder="Ngày Tạo" formControlName="ngayTao">
+      </div>-->
+    </div>
+    <div class="row">
+      <div class="form-group col-sm-6">
+        <label for="thoigian">Thời Gian</label>
+        <input type="text" class="form-control" name="thoigian" id="thoigian" placeholder="Thời Gian" formControlName="thoiGian">
+        <!-- Validation -->
+        <div class="validate">
+          <div class="invalid-tooltip" *ngIf="dethi.get('thoiGian').invalid && dethi.get('thoiGian').touched">
+            Vui lòng điền thời gian thi!
+          </div>
+        </div>
+      </div>
+      <div class="form-group col-sm-6">
+        <label for="diem">Điểm</label>
+        <input type="number" class="form-control" name="diem" id="diem" placeholder="Điểm" formControlName="diem">
+        <!-- Validation -->
+        <div class="validate">
+          <div class="invalid-tooltip" *ngIf="dethi.get('diem').invalid && dethi.get('diem').touched">
+            Vui lòng điền điểm đề thi!
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-sm-4">
+        <label for="capdo">Cấp độ đề thi: </label>
+        <select class="custom-select" name="capdo" id="capdo" formControlName="capDo">
+          <option value="1">Cấp độ 1</option>
+          <option value="2">Cấp độ 2</option>
+          <option value="3">Cấp độ 3</option>
+        </select>
+        <!-- Validation -->
+        <div class="validate">
+          <div class="invalid-tooltip" *ngIf="dethi.get('capDo').invalid && dethi.get('capDo').touched">
+            Vui lòng điền cấp độ!
+          </div>
+        </div>
+      </div>
+      <div class="form-group col-sm-4">
+        <label for="linhvuc">Lĩnh vực: </label>
+        <select class="custom-select" name="linhvuc" id="linhvuc" formControlName="linhVuc">
+          <option *ngFor="let linhvuc of listLinhVuc; index as i" value="{{linhvuc}}">{{linhvuc}}</option>
+        </select>
+        <!-- Validation -->
+        <div class="validate">
+          <div class="invalid-tooltip" *ngIf="dethi.get('linhVuc').invalid && dethi.get('linhVuc').touched">
+            Vui lòng điền lĩnh vực!
+          </div>
+        </div>
+      </div>
+      <div class="form-group col-sm-4">
+        <label for="ngongu">Ngôn Ngữ: </label>
+        <select class="custom-select" name="ngonngu" id="ngonngu" formControlName="ngonNgu">
+          <option *ngFor="let ngonngu of listNgonNgu" value="{{ngonngu}}">{{ngonngu}}</option>
+        </select>
+        <!-- Validation -->
+        <div class="validate">
+          <div class="invalid-tooltip" *ngIf="dethi.get('ngonNgu').invalid && dethi.get('ngonNgu').touched">
+            Vui lòng điền ngôn ngữ!
+          </div>
+        </div>
+      </div>
+    </div>
+    <table id="table_taodethi" class="table table-striped table-bordered" style="width: 100%;">
+      <thead>
+        <tr>
+          <td>Tiêu đề</td>
+          <td>Thời gian</td>
+          <td>Điểm</td>
+          <td>Người tạo câu hỏi</td>
+          <td>Loại câu hỏi</td>
+          <td>Ngày tạo</td>
+          <td>Chọn</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cauhoi of DanhSachCauHoi" class="cau-hoi">
+          <ng-container *ngIf="!cauhoi.daXoa" class="card-header">
+            <td>{{cauhoi.tieuDe}}</td>
+            <td>{{cauhoi.thoiGian}}</td>
+            <td>{{cauhoi.diem}}</td>
+            <td>{{cauhoi.nguoiTao}}</td>
+            <td>{{cauhoi.loaiCauHoi}}</td>
+            <td>{{cauhoi.ngayTao}}</td>
+            <td>
+              <div class="form-check">
+                <label class="form-check-label">
+                  <input type="checkbox" class="form-check-input" value="" (click)="ChonCauHoi(cauhoi)">Chọn
+                </label>
+              </div>
+            </td>
+          </ng-container>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <div style="margin: 20px 5px;">
+      <button class="btn btn-outline-success" type="reset" (click)="TaoDeThi()">Tạo Đề Thi</button>
+    </div>
+  </form>
+
+</div>

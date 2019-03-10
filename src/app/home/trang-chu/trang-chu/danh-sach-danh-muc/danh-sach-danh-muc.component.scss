@@ -1,0 +1,14 @@
+@import '../../../../../assets/Home/Scss/helpers/variables';
+@import '../../../../../assets/Home/Scss/helpers/extends';
+
+
+#DanhSachDanhMuc{
+    padding: $padding_section;
+}
+
+.title_Section{
+    text-align: center;
+    .title1{
+        font-weight: 200 !important;
+    }
+}

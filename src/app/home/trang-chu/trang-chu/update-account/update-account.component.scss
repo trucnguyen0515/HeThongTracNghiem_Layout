@@ -1,0 +1,10 @@
+@import '../../../../../assets/Home/Scss/helpers/variables';
+@import '../../../../../assets/Home/Scss/helpers/mixins';
+
+.title{
+    color:white;
+}
+
+.update_btn{
+    @include my_Button(40px,$mau_Chinh,white,$mau_Chinh)
+}

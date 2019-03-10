@@ -1,0 +1,64 @@
+@import '../../../../../assets/Home/Scss/helpers/variables';
+@import '../../../../../assets/Home/Scss/helpers/mixins';
+
+.title_Section{
+    position: relative;
+    .title1{
+        font-weight: 200 !important;
+    }
+    &::before{
+        position: absolute;
+        content:'';
+        width:40px;
+        height: 2px;
+        bottom:-20px;
+        background:$mau_Chinh;
+    }
+}
+
+.img_Iphone{
+    width:250px;
+    height:500px;
+}
+
+.colorFont{
+    color:$mau_Font_Phu;
+}
+
+ul > li {
+    position: relative;
+    padding-left: 20px;
+    &::after{
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            top: 7px;
+            left: 0;
+            border-radius: 50%;
+            background: $mau_Chinh;
+    }
+}
+
+.dowloadn_app{
+    @include my_Button(0,$mau_Chinh,white,$mau_Chinh);
+    width:200px;
+    cursor: pointer;
+}
+
+.logo_dowload{
+    font-size:30px;
+    padding:0 20px;
+    color:$mau_Font_Phu;
+}
+.icon2{
+    position: relative;
+}
+.icon2::after{
+    content:'';
+    position: absolute;
+    width:1px;
+    height: 32px;
+    background: $mau_Font_Phu;
+    left: 0;
+}

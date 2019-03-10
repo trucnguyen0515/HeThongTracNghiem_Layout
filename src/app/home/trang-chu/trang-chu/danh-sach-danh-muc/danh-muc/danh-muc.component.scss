@@ -1,0 +1,66 @@
+@import '../../../../../../assets/Home/Scss/helpers/variables';
+@import '../../../../../../assets/Home/Scss/helpers/extends';
+
+$Size_Icon: 30px;
+$Mau_Title_DanhMuc: #313d48;
+
+#DanhMuc{
+    padding:$padding_div_title;
+    transition: all 0.3s ease-in-out;
+
+    &:hover{
+        cursor: pointer;
+        .circle_linhvuc{
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+            transform: translateY(-5px);
+            background: $mau_Chinh;
+            h5{
+                color: white;
+            }
+            i{
+                -webkit-text-fill-color:white;          
+                 color: white !important;
+            }    
+        }
+    }
+}
+
+//Icon 
+.icon_linhvuc{
+    display: table;
+    margin:0 auto;
+}
+.circle_linhvuc{
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    width: 100px;
+    height: 100px;
+    background: $mau_Background_1;
+    position: relative;
+    border-radius: 50%;
+    cursor: pointer;
+}
+i{
+    font-size: $Size_Icon;
+    color: $mau_Chinh;
+}
+
+
+// Noi Dung
+.thongtin_linhvuc{
+    margin-top:20px;
+}
+.title{
+    color: $Mau_Title_DanhMuc;
+    font-weight: 600;
+    text-align: center;
+}
+.noidung_linhvuc{
+    margin-top:20px;
+    text-align:center;
+    color:$mau_Font_Chinh;
+}
+
+

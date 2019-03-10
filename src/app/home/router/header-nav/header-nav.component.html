@@ -1,0 +1,45 @@
+<nav id="myNavbar" class="navbar navbar-expand-lg mt-3" #changeColor>
+    <div class="container">
+
+    <!-- Logo -->
+    <div class="myLogo d-flex">
+        <img class="logo" src="../../../../assets/Home/Image/Logo/Full_Logo.png" alt="myLogo">
+      </div>
+  
+    <!-- Toggler/collapsibe Button -->
+    <div id="navresponsive" class="navbar-toggler" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <app-button-responsive-menu></app-button-responsive-menu>
+    </div>
+  
+    <!-- Navbar links -->
+    <div class="collapse myMenu navbar-collapse justify-content-end align-content-between" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+            <li>
+              <a class="mylinknav" (click)="ChuyenTrang('trangchu')">Trang Chủ</a>
+            </li>
+            <li>    
+                <div class="dropdown">
+                    <a class="dropdown-toggle mylinknav" (click)="ChuyenTrang('danhsachdanhmuc')"  id="dropdownMenuLink" data-toggle="dropdown">
+                        Danh Mục
+                    </a>     
+                    <!-- Danh Muc -->
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item">Tiếng Anh Chuyên Ngành IT</a>
+                        <a class="dropdown-item">Lập trình Web</a>
+                        <a class="dropdown-item">Lập trình Web cơ bản</a>
+                        <a class="dropdown-item">Từ Điển Chuyên Ngành IT</a>
+                      </div>
+                </div>                
+            </li>
+            <li>
+              <a class="mylinknav" href="#">Liên Hệ</a>
+            </li>
+            <li>
+                <button class="button_DangNhap" (click)="ChuyenTrang('dangnhap')">Đăng Nhập</button>
+            </li>
+          </ul>
+    </div> 
+
+  </div>
+
+  </nav>

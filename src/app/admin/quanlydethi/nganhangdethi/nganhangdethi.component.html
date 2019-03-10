@@ -1,0 +1,38 @@
+<div class="container">
+  <table id="table_dethi" class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <td>Tiêu đề</td>
+        <td>Thời gian</td>
+        <td>Điểm</td>
+        <td>Người tạo câu hỏi</td>
+        <td>Cấp độ</td>
+        <td>Ngày Tạo</td>
+        <td>Số câu hỏi</td>
+        <td>Chỉnh sửa</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let dethi of DanhSachDeThi">
+        <ng-container *ngIf="!dethi.daXoa" class="card-header">
+          <td>{{dethi.tieuDe}}</td>
+          <td>{{dethi.thoiGian}}</td>
+          <td>{{dethi.diem}}</td>
+          <td>{{dethi.maNguoiTao}}</td>
+          <td>{{dethi.capDo}}</td>
+          <td>{{dethi.ngayTao}}</td>
+          <td>{{dethi.danhSachCauHoi.length}}</td>
+          <td>
+            <button class="btn btn-info" type="button" (click)="ChinhSuaDeThi(dethi)">
+              <i class="fas fa-edit"></i>
+            </button>
+            <button class="btn btn-info" (click)="XoaDeThi(dethi.tieuDe)">
+              <i class="far fa-trash-alt"></i>
+            </button>
+          </td>
+        </ng-container>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
